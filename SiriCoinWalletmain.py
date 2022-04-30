@@ -32,6 +32,7 @@ label2 = ttk.Label(root, text="Loading SiriCoin Wallet..", font="Times 10")
 
 def refreshbal():
     bal = w3.eth.getBalance(optdata)
+    bal = w3.fromWei(bal, "ether")
     label4 = ttk.Label(root, text=f"Your SiriCoin Balance: {bal}", font="Times 14", foreground="Cyan")
     label4.place(x=400, y=150)
 
